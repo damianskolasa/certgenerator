@@ -23,12 +23,12 @@ public class DSACertificateCreatorTest {
 	@Test
 	public void shoudCreateNotNullCertificate() throws Exception {
 		// given
-		DSACertificateCreator ecdsaCertificateCreator = new DSACertificateCreator(CertInfoUtil.getNotBeforeDate(),
+		DSACertificateCreator dsaCertificateCreator = new DSACertificateCreator(CertInfoUtil.getNotBeforeDate(),
 				CertInfoUtil.getNotAfterDate(), CertInfoUtil.getSubject(), BigInteger.ONE);
 		KeyPair ecKeyPair = DSAKeyPairGenerator.generateDSAKeyPair(1024, 160);
 		
 		//when
-		X509Certificate certificate = ecdsaCertificateCreator.createSelfSignedCertificate(ecKeyPair, "SHA1withDSA");
+		X509Certificate certificate = dsaCertificateCreator.createSelfSignedCertificate(ecKeyPair, "SHA1withDSA");
 		
 		// then
 		Assertions.assertThat(certificate).isNotNull();
@@ -37,12 +37,12 @@ public class DSACertificateCreatorTest {
 	@Test
 	public void shoudCreateCertificateWithGivenPublicKey() throws Exception {
 		// given
-		DSACertificateCreator ecdsaCertificateCreator = new DSACertificateCreator(CertInfoUtil.getNotBeforeDate(),
+		DSACertificateCreator dsaCertificateCreator = new DSACertificateCreator(CertInfoUtil.getNotBeforeDate(),
 				CertInfoUtil.getNotAfterDate(), CertInfoUtil.getSubject(), BigInteger.ONE);
 		KeyPair ecKeyPair = DSAKeyPairGenerator.generateDSAKeyPair(1024, 160);
 		
 		//when
-		X509Certificate certificate = ecdsaCertificateCreator.createSelfSignedCertificate(ecKeyPair, "SHA1withDSA");
+		X509Certificate certificate = dsaCertificateCreator.createSelfSignedCertificate(ecKeyPair, "SHA1withDSA");
 		DSAPublicKey pairDSAPublicKey = (DSAPublicKey) ecKeyPair.getPublic();
 		DSAPublicKey certDSAPublicKey = (DSAPublicKey) certificate.getPublicKey();
 		
