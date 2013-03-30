@@ -8,6 +8,7 @@ import java.security.interfaces.RSAPublicKey;
 import java.security.spec.RSAKeyGenParameterSpec;
 
 import net.fatfredyy.certgenerator.keypair.RSAKeyPairGenerator;
+import net.fatfredyy.certgenerator.test.CertInfoUtil;
 
 import org.bouncycastle.jce.provider.BouncyCastleProvider;
 import org.fest.assertions.Assertions;

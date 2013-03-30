@@ -6,6 +6,7 @@ import java.security.Security;
 import java.security.cert.X509Certificate;
 
 import net.fatfredyy.certgenerator.keypair.ECDSAKeyPairGenerator;
+import net.fatfredyy.certgenerator.test.CertInfoUtil;
 
 import org.bouncycastle.jce.interfaces.ECPublicKey;
 import org.bouncycastle.jce.provider.BouncyCastleProvider;

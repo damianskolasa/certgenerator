@@ -1,4 +1,4 @@
-package net.fatfredyy.certgenerator.cert;
+package net.fatfredyy.certgenerator.test;
 
 import java.util.Calendar;
 import java.util.Date;
