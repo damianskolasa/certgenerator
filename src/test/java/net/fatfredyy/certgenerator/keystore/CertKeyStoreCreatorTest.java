@@ -107,7 +107,7 @@ public class CertKeyStoreCreatorTest {
 		// given
 		ECCertificateCreator ecCertificateCreator = new ECCertificateCreator(CertInfoUtil.getNotBeforeDate(),
 				CertInfoUtil.getNotAfterDate(), CertInfoUtil.getSubject(), BigInteger.ONE);
-		KeyPair keyPair = ECKeyPairGenerator.generateECKeyPair("prime192v1");
+		KeyPair keyPair = ECKeyPairGenerator.generateECKeyPair("c2pnb272w1");
 		X509Certificate certificate = ecCertificateCreator.createSelfSignedCertificate(keyPair, "SHA1withECDSA");
 		CertKeyStoreCreator certKeyStoreCreator = new CertKeyStoreCreator(certificate, keyPair.getPrivate());
 		KeyStore keyStore = certKeyStoreCreator.creteKeyStore("privateKey", "certificate", "123456".toCharArray());
