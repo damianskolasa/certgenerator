@@ -19,8 +19,8 @@ public class CertKeyStoreCreator {
 		KeyStore ks = KeyStore.getInstance("PKCS12", "BC");
 		ks.load(null);
 		
-		ks.setCertificateEntry("certificateAlias", certificate);
-		ks.setEntry("privateKeyEntryAlias", privateKE, new KeyStore.PasswordProtection(privateKeyPassword));
+		ks.setCertificateEntry(certificateAlias, certificate);
+		ks.setEntry(privateKeyEntryAlias, privateKE, new KeyStore.PasswordProtection(privateKeyPassword));
 		
 		return ks;
 	}
