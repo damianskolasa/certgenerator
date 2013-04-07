@@ -30,13 +30,13 @@ public class RSACertGenerator {
 		storeCert(generatedKeyPair, "1024"); 
 		
 		generatedKeyPair = RSAKeyPairGenerator.generateRSAKeyPair(2048, RSAKeyGenParameterSpec.F4);
-		storeCert(generatedKeyPair, "2048"); 
+		storeCert(generatedKeyPair, "3072"); 
 
 		generatedKeyPair = RSAKeyPairGenerator.generateRSAKeyPair(4096, RSAKeyGenParameterSpec.F4);
-		storeCert(generatedKeyPair, "4096"); 
+		storeCert(generatedKeyPair, "7680"); 
 		
 		generatedKeyPair = RSAKeyPairGenerator.generateRSAKeyPair(8192, RSAKeyGenParameterSpec.F4);
-		storeCert(generatedKeyPair, "8192"); 
+		storeCert(generatedKeyPair, "15360"); 
 
 	}
 
